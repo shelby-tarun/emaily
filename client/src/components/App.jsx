@@ -2,16 +2,11 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
-import Header from "./Header.jsx";
-import Homepage from "./Homepage";
 import { fetchUser } from "../actions";
-
-const Dashboard = () => (
-  <div>
-    <h2>Dashboard</h2>
-  </div>
-);
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import Dashboard from "./Dashbaord/Dashboard";
+import Header from "./Header";
+import Homepage from "./Homepage";
+import SurveyNew from "./Surveys/SurveyNew";
 
 const App = (props) => {
   useEffect(() => {

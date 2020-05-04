@@ -3,11 +3,12 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');
-const API = require('./routes/api');
-const keys = require('./config/keys');
 require('./models/Users');
+require('./models/Survey');
 require('./services/passport');
+const auth = require('./routes/auth');
+const api = require('./routes/api');
+const keys = require('./config/keys');
 
 mongoose.connect(keys.mongoURI);
 
@@ -23,8 +24,8 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/auth', authRoutes);
-app.use('/api', API);
+app.use('/auth', auth);
+app.use('/api', api);
 
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets

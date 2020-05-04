@@ -1,0 +1,19 @@
+.dashboard {
+  &__add-survey-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    &:hover {
+      background-color: #e00b0b;
+      cursor: pointer;
+    }
+    text-align: center;
+    vertical-align: middle;
+  }
+}
