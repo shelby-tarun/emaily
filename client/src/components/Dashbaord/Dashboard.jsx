@@ -7,10 +7,7 @@ const Dashboard = () => {
   return (
     <div>
       <Link to="/surveys/new">
-        <button
-          className="dashboard__add-survey-btn"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        <button className="dashboard__add-survey-btn">
           <i className="fa fa-plus fa-lg" style={{ color: "white" }} />
         </button>
       </Link>
